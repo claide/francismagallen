@@ -1,0 +1,27 @@
+{
+    "Main": {
+        "heading": {
+            "type": "StructuredText",
+            "config": {
+                "single": "heading2",
+                "label": "Heading",
+                "placeholder": "Cta heading"
+            }
+        },
+        "content": {
+            "type": "StructuredText",
+            "config": {
+                "multi": "paragraph, strong, em, hyperlink",
+                "label": "Content",
+                "placeholder": "Cta content"
+            }
+        },
+        "link": {
+            "type": "Link",
+            "config": {
+                "label": "Link",
+                "placeholder": "Cta link"
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "Main": {
+        "uid": {
+            "type": "UID",
+            "config": {
+                "label": "uid",
+                "placeholder": "uid"
+            }
+        },
+        "title": {
+            "type": "StructuredText",
+            "config": {
+                "single": "heading1",
+                "label": "Title",
+                "placeholder": "Page title"
+            }
+        },
+        "description": {
+            "type": "StructuredText",
+            "config": {
+                "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                "label": "Description",
+                "placeholder": "Page description"
+            }
+        },
+        "body": {
+            "type": "Slices",
+            "fieldset": "Slice zone",
+            "config": {
+                "labels": {
+                    "experience": []
+                },
+                "choices": {
+                    "experience": {
+                        "type": "Slice",
+                        "fieldset": "Experience",
+                        "description": "Work experience",
+                        "icon": "work",
+                        "display": "list",
+                        "non-repeat": {},
+                        "repeat": {
+                            "position": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "single": "heading3",
+                                    "label": "Position",
+                                    "placeholder": "Work position"
+                                }
+                            },
+                            "company": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph",
+                                    "label": "Company"
+                                }
+                            },
+                            "date": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph",
+                                    "label": "Date"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
