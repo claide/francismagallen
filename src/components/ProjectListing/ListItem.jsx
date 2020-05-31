@@ -37,6 +37,9 @@ const StackContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 44px;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-bottom: 22px;
+  }
   span {
     margin-right: 12px;
     text-transform: uppercase;
