@@ -30,8 +30,9 @@ const Banner = styled.div`
 const StackContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
   @media (min-width: ${(props) => props.theme.breakpoints.m}) {
     margin-bottom: 4rem;
   }
