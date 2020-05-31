@@ -24,23 +24,10 @@ const StyledHeader = styled.nav`
   }
 `
 
-const LogoLg = styled.span`
-  display: none;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    display: block;
-  }
-`
-
 const StyledBrand = styled.div`
   a {
-    color: var(--textNormal);
-    font-size: 1.25em;
-    font-weight: 700;
-    &:hover {
-      text-decoration: none;
-    }
     img {
-      display: none;
+      width: 3.5rem;
       @media (max-width: ${(props) => props.theme.breakpoints.s}) {
         width: 2.5rem;
         display: block;
@@ -77,7 +64,6 @@ class Header extends Component {
       <StyledHeader>
         <StyledBrand>
           <Link to="/" aria-label="Back to Home">
-            <LogoLg>&#123; francisMagallen &#125;</LogoLg>
             <img src="/logos/favicon.png" alt="" />
           </Link>
         </StyledBrand>

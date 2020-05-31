@@ -6,7 +6,7 @@ module.exports = {
   headline: 'Writing and showcasing of works for Francis Magallen.', // Headline for schema.org JSONLD
   url: 'https://francismagallen.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: '/logos/logo-1024.png', // Used for SEO
+  logo: '/logos/logo.png', // Used for SEO
   ogLanguage: 'en_US', // Facebook Language
 
   // JSONLD / Manifest
