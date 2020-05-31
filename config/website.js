@@ -13,8 +13,8 @@ module.exports = {
   favicon: 'src/favicon.png', // Used for manifest favicon generation
   shortName: 'Francis', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Francis Magallen', // Author for schemaORGJSONLD
-  themeColor: '#3D63AE',
-  backgroundColor: '#EBEDF2',
+  themeColor: '#7E57C2',
+  backgroundColor: '#FFFFFF',
 
   twitter: '@francismagallen', // Twitter Username
   facebook: 'tolap20', // Facebook Site Name
