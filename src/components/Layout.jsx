@@ -62,8 +62,10 @@ const globalStyle = css`
     transition: all 0.4s ease-in-out;
   }
   h1 {
-    font-size: 72px;
-    line-height: 87px;
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    font-weight: 800;
   }
   html {
     -webkit-font-smoothing: antialiased;
@@ -72,8 +74,8 @@ const globalStyle = css`
   body {
     color: var(--textNormal);
     background-color: var(--bg);
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 30px;
   }
   ::selection {
     color: ${theme.colors.bg};
@@ -99,10 +101,12 @@ const globalStyle = css`
   }
   @media (max-width: ${theme.breakpoints.s}) {
     h1 {
-      font-size: 2.369rem !important;
+      font-size: 11.5vw !important;
+      line-height: 11.5vw !important;
     }
     h2 {
-      font-size: 1.777rem !important;
+      font-size: 28px !important;
+      line-height: 36px !important;
     }
     h3 {
       font-size: 1.333rem !important;

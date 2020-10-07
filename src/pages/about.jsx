@@ -33,6 +33,7 @@ const Header = styled.header`
     }
     @media (max-width: ${(props) => props.theme.breakpoints.s}) {
       line-height: 1.3;
+      margin-bottom: 24px;
     }
   }
   p {
@@ -45,6 +46,7 @@ const Header = styled.header`
     }
     @media (max-width: ${(props) => props.theme.breakpoints.s}) {
       font-size: 1.25rem;
+      line-height: 33px;
       margin-bottom: 22px;
     }
   }
@@ -64,8 +66,13 @@ const CtaWrapper = styled.div`
     margin-bottom: 24px;
   }
   p {
-    font-size: 22px;
+    font-size: 16px;
+    line-height: 30px;
     margin-bottom: 40px;
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
 `
 const CtaContainer = styled.div`
@@ -126,7 +133,8 @@ const ExpWrapper = styled.div`
 
 const ExpTitle = styled.p`
   font-weight: 700 !important;
-  margin-bottom: 0 !important;
+  margin-bottom: 8px !important;
+  font-size: 20px !important;
 `
 
 class About extends Component {
@@ -136,7 +144,7 @@ class About extends Component {
     } = this.props
     return (
       <Layout customSeo>
-        <SEO title={`${website.titleAlt} — About`} />
+        <SEO title={`${about.data.title.text} — ${website.titleAlt}`} />
         <div id={website.skipNavId}>
           <Container>
             <Header>
@@ -147,9 +155,8 @@ class About extends Component {
                 {about.data.body &&
                   about.data.body.map((exp) => (
                     <div key={exp.id}>
-                      <ExpTitle>
-                        {exp.items[0].company.text} - {exp.items[0].position.text}
-                      </ExpTitle>
+                      <ExpTitle>{exp.items[0].company.text}</ExpTitle>
+                      <ExpTitle>{exp.items[0].position.text}</ExpTitle>
                       <small>{exp.items[0].date.text}</small>
                     </div>
                   ))}

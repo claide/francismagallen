@@ -67,7 +67,7 @@ const Project = ({ data: { prismicProject }, location }) => {
   return (
     <Layout customSEO>
       <SEO
-        title={`${website.titleAlt} — ${data.title.text}`}
+        title={`${data.title.text} — ${website.titleAlt}`}
         pathname={location.pathname}
         desc={data.description}
         node={prismicProject}

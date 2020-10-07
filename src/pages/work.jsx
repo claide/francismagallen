@@ -66,10 +66,19 @@ const CtaWrapper = styled.div`
     line-height: 39px;
     font-weight: bold;
     margin-bottom: 24px;
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
   p {
-    font-size: 22px;
+    font-size: 21px;
+    line-height: 35px;
     margin-bottom: 40px;
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
 `
 const CtaContainer = styled.div`
@@ -121,7 +130,7 @@ class Work extends Component {
     } = this.props
     return (
       <Layout customSeo>
-        <SEO title={`${website.titleAlt} — Work`} />
+        <SEO title={`Work — ${website.titleAlt}`} />
         <div id={website.skipNavId}>
           <Container>
             <Header>

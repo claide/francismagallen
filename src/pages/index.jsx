@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { graphql, Link } from 'gatsby'
-import { Layout, Wrapper } from '../components'
+import { Layout, Wrapper, SEO } from '../components'
 import website from '../../config/website'
 import ProjectListing from '../components/ProjectListing'
 
@@ -16,6 +16,11 @@ const HeroInner = styled(Wrapper)`
   padding-bottom: 7.7rem;
   h1 {
     margin-bottom: 0;
+    max-width: 46.5rem;
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: 11.5vw !important;
+      line-height: 11.5vw !important;
+    }
     &:last-of-type {
       margin-bottom: 44px;
       @media (max-width: ${(props) => props.theme.breakpoints.m}) {
@@ -48,16 +53,16 @@ const HeroInner = styled(Wrapper)`
 `
 
 const HeroText = styled.div`
-  font-size: 22px;
-  line-height: 1.6;
+  font-size: 21px;
+  line-height: 35px;
   margin-bottom: 44px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.4rem;
     margin-bottom: 32px;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 1.25rem;
-    margin-bottom: 22px;
+    font-size: 18px;
+    margin-bottom: 28px;
   }
 `
 
@@ -81,8 +86,8 @@ const Button = styled.a`
     text-decoration: none;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 1.2rem;
-    padding: 1em 1.4em;
+    font-size: 16px;
+    padding: 12px 24px;
   }
 `
 
@@ -107,8 +112,8 @@ const ButtonLink = styled(Link)`
     text-decoration: none;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 1.2rem;
-    padding: 1em 1.4em;
+    font-size: 16px;
+    padding: 12px 24px;
   }
 `
 
@@ -136,10 +141,19 @@ const CtaWrapper = styled.div`
     line-height: 39px;
     font-weight: bold;
     margin-bottom: 24px;
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
   p {
-    font-size: 22px;
+    font-size: 21px;
+    line-height: 35px;
     margin-bottom: 40px;
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
 `
 const CtaContainer = styled.div`
@@ -167,11 +181,12 @@ class Index extends Component {
       data: { homepage, projects, cta },
     } = this.props
     return (
-      <Layout>
+      <Layout customSeo>
+        <SEO title={`${homepage.data.title.text} ${homepage.data.sub_title.text} — ${website.titleAlt}`} />
         <Hero>
           <HeroInner>
-            <h1>{homepage.data.title.text}</h1>
-            <h1>{homepage.data.sub_title.text}</h1>
+            <h1>{homepage.data.title.text} {homepage.data.sub_title.text}</h1>
+            {/* <h1>{homepage.data.sub_title.text}</h1> */}
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Button href="mailto:magallen.fc@gmail.com">Contact Me</Button>
           </HeroInner>

@@ -16,7 +16,8 @@ const StyledHeader = styled.nav`
   }
   a {
     color: var(--textNormal);
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 22px;
     font-weight: 400;
     font-style: normal;
     font-family: 'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif,
@@ -26,6 +27,8 @@ const StyledHeader = styled.nav`
 
 const StyledBrand = styled.div`
   a {
+    font-weight: 800;
+    font-size: 24px;
     img {
       width: 3.5rem;
       @media (max-width: ${(props) => props.theme.breakpoints.s}) {
@@ -33,6 +36,26 @@ const StyledBrand = styled.div`
         display: block;
       }
     }
+  }
+`
+
+const LogoLg = styled.div`
+  font-size: 18px;
+  font-weight: 600;
+  display: none;
+  border-bottom: 4px solid transparent;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    display: block;
+  }
+`
+
+const LogoSm = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  display: none;
+  border-bottom: 4px solid transparent;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: block;
   }
 `
 
@@ -64,7 +87,9 @@ class Header extends Component {
       <StyledHeader>
         <StyledBrand>
           <Link to="/" aria-label="Back to Home">
-            <img src="/logos/favicon.png" alt="" />
+            <LogoLg>Francis Magallen</LogoLg>
+            <LogoSm>FM.</LogoSm>
+            {/* <img src="/logos/favicon.png" alt="" /> */}
           </Link>
         </StyledBrand>
         <StyledLinks>
