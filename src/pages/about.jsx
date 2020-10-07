@@ -8,7 +8,6 @@ import website from '../../config/website'
 const Container = Wrapper.withComponent('main')
 
 const Header = styled.header`
-  /* max-width: ${(props) => props.theme.maxWidthTitle}; */
   padding-top: 7.7rem;
   padding-bottom: 7.7rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
